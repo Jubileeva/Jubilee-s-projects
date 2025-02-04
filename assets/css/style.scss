@@ -1,0 +1,154 @@
+
+
+$bg-color: #080C1A;
+$second-bg-color: #12172B ;
+$text-color: #BFC9DA;
+$main-color: #3D7ECF; /*#2D91C2 #2F9BCE*/
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html{
+  font-size: 62.5%;
+}
+body{
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+/* Universal section alignment */
+section{
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/* Universal button style */
+.btn-box{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 34.5rem;
+  height: 5rem;
+
+  .btn{
+    position: relative;
+    display: inline-flex; /*can put jc and ai center in children */
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background-color: $main-color;
+    border: 3.2px solid $main-color;
+    border-radius: 0.8rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    color: $bg-color;
+    z-index: 1;
+    overflow: hidden;
+    transform: 0.5s;
+
+    &:hover{
+      color: $main-color;
+    }
+
+    &:nth-child(2){
+      background-color: transparent;
+      color: $main-color;
+
+      &:hover{
+        color: $bg-color;
+      }
+
+      &::before{
+        background-color: $main-color;
+      }
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: $bg-color;
+      z-index: -1;
+      transition: 0.5s;
+    }
+    &:hover::before{
+      width: 100%;
+    }
+  }
+}
+
+/* Universal heading style */
+.heading{
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+span{
+  color: $main-color;
+}
+/* Projects design */
+.projects{
+  background-color: $bg-color;
+  padding-bottom: 7rem;
+  .projects-box{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 7rem;
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 7rem 0 0;
+    .project-card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: $second-bg-color;
+      border: 2px solid $main-color;
+      border-radius: 3rem;
+      gap: 2rem;
+      max-width: 35rem;
+      padding: 5rem 2rem;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 0 5px $main-color;
+      transition: 0.3s ease;
+      &:hover{
+        box-shadow: 0 0 25px $main-color, 
+                    0 0 50px $main-color;
+        transform: scale(1.02);
+      }
+      img{
+        max-width: 19rem;
+        border-radius: 2em;
+        object-fit: cover;
+      }
+      h3{
+        font-size: 2.5rem;
+      }
+      p{
+        font-size: 1.6rem;
+      }
+      .btn-box{
+        .btn{
+          width: 35%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

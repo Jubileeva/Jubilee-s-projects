@@ -1,0 +1,141 @@
+/*#2D91C2 #2F9BCE*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #080C1A;
+  color: #BFC9DA;
+}
+
+/* Universal section alignment */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/* Universal button style */
+.btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 34.5rem;
+  height: 5rem;
+}
+.btn-box .btn {
+  position: relative;
+  display: inline-flex; /*can put jc and ai center in children */
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  background-color: #3D7ECF;
+  border: 3.2px solid #3D7ECF;
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: #080C1A;
+  z-index: 1;
+  overflow: hidden;
+  transform: 0.5s;
+}
+.btn-box .btn:hover {
+  color: #3D7ECF;
+}
+.btn-box .btn:nth-child(2) {
+  background-color: transparent;
+  color: #3D7ECF;
+}
+.btn-box .btn:nth-child(2):hover {
+  color: #080C1A;
+}
+.btn-box .btn:nth-child(2)::before {
+  background-color: #3D7ECF;
+}
+.btn-box .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #080C1A;
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn-box .btn:hover::before {
+  width: 100%;
+}
+
+/* Universal heading style */
+.heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+span {
+  color: #3D7ECF;
+}
+
+/* Projects design */
+.projects {
+  background-color: #080C1A;
+  padding-bottom: 7rem;
+}
+.projects .projects-box {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 7rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 7rem 0 0;
+}
+.projects .projects-box .project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #12172B;
+  border: 2px solid #3D7ECF;
+  border-radius: 3rem;
+  gap: 2rem;
+  max-width: 35rem;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px #3D7ECF;
+  transition: 0.3s ease;
+}
+.projects .projects-box .project-card:hover {
+  box-shadow: 0 0 25px #3D7ECF, 0 0 50px #3D7ECF;
+  transform: scale(1.02);
+}
+.projects .projects-box .project-card img {
+  max-width: 19rem;
+  border-radius: 2em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects .projects-box .project-card h3 {
+  font-size: 2.5rem;
+}
+.projects .projects-box .project-card p {
+  font-size: 1.6rem;
+}
+.projects .projects-box .project-card .btn-box .btn {
+  width: 35%;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */
